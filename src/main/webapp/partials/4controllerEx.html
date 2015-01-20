@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap -->
+<style type="text/css">
+
+html,body {
+	height: 100%;
+}
+
+.lead {
+	color: #DDCCEE;
+}
+
+</style>
+</head>
+<body>
+		<div class="row">
+			<div class="col-lg-12 text-center v-center">
+
+				<h1>Hello Angular</h1>
+				<p class="lead">Basic example of AngularJS with Bootstrap 3</p>
+
+				<br> <br> <br>
+				<div class="input-group"
+					style="width: 340px; text-align: center; margin: 0 auto;">
+					<input class="form-control input-lg" title="U r name goes here."
+						placeholder="Enter your name" type="text" ng-model="name"
+						name="name">
+				</div>
+				<br>
+				<h3>
+					Welcome <i style="color: red">{{name}}</i> to the {{hello.title}}
+					world!
+				</h3>
+			</div>
+			<div class="col-lg-12 text-center ">
+				<button id="show" class="btn btn-default">preview</button>
+				<div id="preview">
+					<h2>Angular Controller</h2>
+					<pre>
+					 angular.module("app",[]) <br/>
+					 .controller("HelloController", function() { <br/>
+					 	/* $scope.name	= "mallik"; */  <br/>
+					 	this.title ="AngularJS"; }); 
+					 	</pre>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- End row -->
+</body>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#preview").hide();
+	});
+	$('#show').click(function() {
+		console.log("got it");
+		$("#preview").toggle();
+	});
+</script>
+</html>
